@@ -20,7 +20,11 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^user/', include('user.urls')),
+    # homepage
+    url(r'^$', 'truman.portal.views.index', name='protal.home'),
 
+    # apps urls
+    url(r'^portal/', include('truman.portal.urls')),
+    url(r'^user/', include('truman.user.urls')),
+    url(r'^admin/', include(admin.site.urls)),
 ]
