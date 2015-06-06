@@ -16,7 +16,13 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(
+    os.path.dirname(
+        os.path.dirname(
+            os.path.abspath(__file__)
+        )
+    )
+)
 
 
 # Quick-start development settings - unsuitable for production
@@ -78,3 +84,32 @@ from database import *
 from i18n import *
 from static import *
 from wsgi import *
+
+# ------------------------------------------------------------------
+
+__all__ = [
+    BASE_DIR,
+    SECRET_KEY,
+    DEBUG,
+    ALLOWED_HOSTS,
+    INSTALLED_APPS,
+    MIDDLEWARE_CLASSES,
+    TEMPLATES,
+    ROOT_URLCONF,
+
+    # database
+    DATABASES,
+
+    # i18n
+    LANGUAGE_CODE,
+    TIME_ZONE,
+    USE_I18N,
+    USE_L10N,
+    USE_TZ,
+
+    # static
+    STATIC_URL,
+
+    # wsgi
+    WSGI_APPLICATION,
+]
