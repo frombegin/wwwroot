@@ -16,11 +16,11 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
+# ------------------------------------------------------------------
+
 BASE_DIR = os.path.dirname(
     os.path.dirname(
-        os.path.dirname(
-            os.path.abspath(__file__)
-        )
+        os.path.abspath(__file__)
     )
 )
 
@@ -36,6 +36,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# ------------------------------------------------------------------
 
 # Application definition
 
@@ -80,36 +81,52 @@ ROOT_URLCONF = 'www.urls'
 
 # ------------------------------------------------------------------
 
-from database import *
-from i18n import *
-from static import *
-from wsgi import *
+# Database
+# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': '',
+        'NAME': 'my',
+    }
+}
 
 # ------------------------------------------------------------------
 
-__all__ = [
-    BASE_DIR,
-    SECRET_KEY,
-    DEBUG,
-    ALLOWED_HOSTS,
-    INSTALLED_APPS,
-    MIDDLEWARE_CLASSES,
-    TEMPLATES,
-    ROOT_URLCONF,
+# Internationalization
+# https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-    # database
-    DATABASES,
+LANGUAGE_CODE = 'zh-hans'
 
-    # i18n
-    LANGUAGE_CODE,
-    TIME_ZONE,
-    USE_I18N,
-    USE_L10N,
-    USE_TZ,
+TIME_ZONE = 'UTC'
 
-    # static
-    STATIC_URL,
+USE_I18N = True
 
-    # wsgi
-    WSGI_APPLICATION,
-]
+USE_L10N = True
+
+USE_TZ = True
+
+# ------------------------------------------------------------------
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
+
+STATIC_URL = '/static/'
+
+# ------------------------------------------------------------------
+
+WSGI_APPLICATION = 'www.wsgi.application'
+
+# ------------------------------------------------------------------
