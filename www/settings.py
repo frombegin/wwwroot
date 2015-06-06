@@ -47,8 +47,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'truman.portal',
-    'truman.user',
+    'tworld.portal',
+    'tworld.user',
 )
 
 MIDDLEWARE_CLASSES = (

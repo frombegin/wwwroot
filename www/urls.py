@@ -21,10 +21,10 @@ from django.contrib import admin
 
 urlpatterns = [
     # homepage
-    url(r'^$', 'truman.portal.views.index', name='protal.home'),
+    url(r'^$', 'tworld.portal.views.index', name='protal.home'),
 
     # apps urls
-    url(r'^portal/', include('truman.portal.urls')),
-    url(r'^user/', include('truman.user.urls')),
+    url(r'^portal/', include('tworld.portal.urls')),
+    url(r'^user/', include('tworld.user.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
