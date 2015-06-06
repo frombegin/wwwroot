@@ -1,3 +1,8 @@
 TODO: custom User Model
 TODO: user.urls
 TODO: split settings for devel, staging, prod modes
+TODO: integrate widgets for django-taggit (https://github.com/bennylope/django-taggit-labels)
+TODO: integrate autosuggest for django-taggit (https://bitbucket.org/fabian/django-taggit-autosuggest)
+TODO: integrate REST API (http://www.django-rest-framework.org)
+TODO: copy from cookiecutter-django (https://github.com/pydanny/cookiecutter-django)
+TODO: fix UserInfo (https://gist.github.com/frombegin/c6c667b8aa49748144ff#file-base-html-L46)
