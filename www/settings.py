@@ -49,6 +49,8 @@ INSTALLED_APPS = (
 
     'tworld.portal',
     'tworld.user',
+
+    'debug_toolbar',    # TODO: move into settings/dev.py?
 )
 
 MIDDLEWARE_CLASSES = (

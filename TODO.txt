@@ -1,2 +1,3 @@
 TODO: custom User Model
 TODO: user.urls
+TODO: split settings for devel, staging, prod modes
