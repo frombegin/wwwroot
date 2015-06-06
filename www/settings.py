@@ -37,7 +37,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # ------------------------------------------------------------------
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -80,7 +79,6 @@ TEMPLATES = [
 ROOT_URLCONF = 'www.urls'
 
 # ------------------------------------------------------------------
-
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
@@ -103,7 +101,6 @@ DATABASES = {
 }
 
 # ------------------------------------------------------------------
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
@@ -118,8 +115,6 @@ USE_L10N = True
 USE_TZ = True
 
 # ------------------------------------------------------------------
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
