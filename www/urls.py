@@ -33,7 +33,8 @@ urlpatterns = [
     url(r'^slide/', include('tworld.slide.urls')),
     url(r'^user/', include('tworld.user.urls')),
     url(r'^admin/', include(admin.site.urls)),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(r'media/', document_root=settings.MEDIA_ROOT)
+#static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit

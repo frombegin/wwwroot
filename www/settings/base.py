@@ -79,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -129,8 +130,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = '/media/'
+MEDIA_URL = 'http://127.0.0.1:8000/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # ------------------------------------------------------------------
 
