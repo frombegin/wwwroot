@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .mycls {
+            font-family: "Times New Roman";
+            font-size: 40px;
+            color: red;
+            text-transform: uppercase;
+            border-bottom: thin dashed #ff0000;
+        }
+    </style>
+
+</head>
+<body>
+
+{% for o in object_list %}
+    <p class="mycls">{{ o }}</p>
+{% endfor %}
+
+<p style="border-bottom: dotted; border-bottom-width: thin; border-bottom-color: #0000ff"> A New Line!!</p>
+
+</body>
+</html>

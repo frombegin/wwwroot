@@ -24,13 +24,13 @@ from django.conf import settings
 
 urlpatterns = [
     # homepage
-    #url(r'^$', 'tworld.portal.views.index', name='protal.home'),
+    #url(r'^$', 'tworld.slide.views.index', name='protal.home'),
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name="about"),
 
 
     # apps urls
-    url(r'^portal/', include('tworld.portal.urls')),
+    url(r'^slide/', include('tworld.slide.urls')),
     url(r'^user/', include('tworld.user.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -49,8 +49,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'tworld.portal',
-    #'tworld.user',
+    'tworld.user',
+    'tworld.slide',
 
     'debug_toolbar',  # TODO: move into settings/dev.py?
 )
@@ -105,6 +105,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '',
         'NAME': 'my',
+        'OPTIONS': {'charset': 'utf8mb4'},
     }
 }
 
